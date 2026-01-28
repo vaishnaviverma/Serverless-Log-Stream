@@ -18,6 +18,8 @@ A key technical highlight of this project is the implementation of **AWS Glue Jo
 
 ## Solution Approach
 
+![Solution Workflow](diagram.png)
+
 ### 1. Incremental Ingestion & State Management
 To handle data efficiently at scale, the pipeline utilizes **Glue DynamicFrames** to enable Job Bookmarks. 
 * **Transformation Context:** Each read/write operation uses a unique `transformation_ctx` to ensure the Glue service can track which S3 objects have already been processed.
